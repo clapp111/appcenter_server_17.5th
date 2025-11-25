@@ -52,7 +52,7 @@ jobs:
         with:
           host: ${{secrets.EC2_IP}}
           username: ${{secrets.EC2_USRENAME}}
-          password: ${{secrets.EC2_PASSWORD}}
+          key: ${{secrets.EC2_PASSWORD}}
           port: ${{secrets.EC2_PORT}}
           script: |
             cd /home/ubuntu/baemin

@@ -21,10 +21,6 @@ public class SwaggerConfig {
                 .scheme("bearer")
                 .bearerFormat("JWT");
 
-        Server prodServer = new Server();
-        prodServer.setUrl("https://dongmin.inuappcenter.kr");
-        prodServer.description("Production Server");
-
         Server localServer = new Server();
         localServer.setUrl("http://localhost:8080");
         localServer.description("Local Development Server");
@@ -34,7 +30,7 @@ public class SwaggerConfig {
                 .components(new Components()
                         .addSecuritySchemes("bearerAuth", securityScheme))
                 .info(apiInfo())
-                .servers(List.of(prodServer, localServer));
+                .servers(List.of(localServer));
     }
 
     private Info apiInfo() {
