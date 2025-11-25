@@ -6,6 +6,9 @@ services:
     container_name: baemin-server
     ports:
       - "8080:8080"
-    env_file:
-      - .env
+    environment:
+      - DOCKER_HUB_USERNAME=${DOCKER_HUB_USERNAME}
+      - ACCESS_TOKEN_VALID_TIME=${ACCESS_TOKEN_VALID_TIME}
+      - REFRESH_TOKEN_VALID_TIME=${REFRESH_TOKEN_VALID_TIME}
+      - JWT_SECRET=${JWT_SECRET}
     restart: always

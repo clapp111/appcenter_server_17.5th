@@ -57,12 +57,10 @@ jobs:
           script: |
             cd /home/ubuntu/baemin
 
-            cat > .env << EOF
-            DOCKER_HUB_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}
-            ACCESS_TOKEN_VALID_TIME=${{ secrets.ACCESS_TOKEN_VALID_TIME }}
-            REFRESH_TOKEN_VALID_TIME=${{ secrets.REFRESH_TOKEN_VALID_TIME }}
-            JWT_SECRET=${{ secrets.JWT_SECRET }}
-            EOF
+            export DOCKER_HUB_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}
+            export ACCESS_TOKEN_VALID_TIME=${{ secrets.ACCESS_TOKEN_VALID_TIME }}
+            export REFRESH_TOKEN_VALID_TIME=${{ secrets.REFRESH_TOKEN_VALID_TIME }}
+            export JWT_SECRET=${{ secrets.JWT_SECRET }}
             
             sudo docker compose down
             sudo docker compose pull
