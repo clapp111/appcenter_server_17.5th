@@ -22,7 +22,7 @@ public class SwaggerConfig {
                 .bearerFormat("JWT");
 
         Server localServer = new Server();
-        localServer.setUrl("http://localhost:8080");
+        localServer.setUrl("http://13.211.197.250:8080");
         localServer.description("Local Development Server");
 
         return new OpenAPI()
