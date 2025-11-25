@@ -1,0 +1,8 @@
+services:
+  baemin-server:
+    container_name: baemin-server
+    image: ${DOCKER_HUB_USERNAME}/baemin-server:latest
+    ports:
+      - "8002:8000"
+    environment:
+      - TZ=Asia/Seoul
