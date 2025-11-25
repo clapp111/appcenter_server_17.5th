@@ -55,7 +55,7 @@ jobs:
           key: ${{secrets.EC2_PASSWORD}}
           port: ${{secrets.EC2_PORT}}
           script: |
-            cd /home/ubuntu/baemin
+            cd /baemin
 
             echo "DOCKER_HUB_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}" > .env
 
